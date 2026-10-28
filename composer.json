@@ -1,0 +1,64 @@
+{
+    "name": "biometric-push/laravel-amt-push",
+    "description": "AMT / M50 WebSocket SDK server for Laravel 8-12+: attendance terminals (AMT800, AMF800, F500 family) connect to your app over WebSocket; punches, users, commands and fingerprint/face/palm templates are managed from PHP or artisan.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "amt",
+        "amt800",
+        "websocket",
+        "biometric",
+        "attendance",
+        "fingerprint",
+        "face",
+        "workerman"
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "ext-mbstring": "*",
+        "ext-simplexml": "*",
+        "illuminate/bus": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/console": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/database": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/events": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/queue": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "workerman/workerman": "^4.1|^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0|^7.0|^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^9.5|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BiometricPush\\AmtPush\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BiometricPush\\AmtPush\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BiometricPush\\AmtPush\\AmtPushServiceProvider"
+            ],
+            "aliases": {
+                "Amt": "BiometricPush\\AmtPush\\Facades\\Amt"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
