@@ -1,8 +1,0 @@
-/vendor/
-/vendor-*/
-composer.lock
-.phpunit.result.cache
-.phpunit.cache/
-/build/
-.idea/
-.vscode/
